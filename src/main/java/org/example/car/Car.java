@@ -5,6 +5,7 @@ public class Car extends Transport implements IRefuel, IStop, IKeepSpeed {
     Engine engine;
     Radiator radiator;
     Battery battery;
+    int a = 5;
 
     public Car() {
     }

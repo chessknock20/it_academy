@@ -1,6 +1,6 @@
 package org.example.car;
 
-public final class Bus extends Transport {
+public final class Bus extends Transport implements IRefuel, IStop, IKeepSpeed{
 
     private final int seatsNumber = 16;
 
@@ -26,6 +26,16 @@ public final class Bus extends Transport {
 
     public final void showSeatsNumber() {
         System.out.println(seatsNumber);
+    }
+
+    @Override
+    public void refuel() {
+        System.out.println("The bus is refueling");
+    }
+
+    @Override
+    public void stop() {
+        System.out.println("The bus stopped");
     }
 
 }

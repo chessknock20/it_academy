@@ -8,23 +8,26 @@ public class Main {
         Battery battery1 = new Battery();
 
         Car car1 = new Car("Audi", engine1, radiator1, battery1);
-        Car car2 = new Car("Volvo", new Engine(260));
-        Bus bus1 = new Bus();
+        Bus bus1 = new Bus("Ford");
 
-        Car car3 = new Car("Huyndai");
+        Transport transport1 = new Car("Hyundai");
+        transport1.parking();
 
-        car1.run();
-        bus1.run();
+        Transport transport2 = new Bus("Volvo");
 
-        car1.parking();
-        bus1.parking();
+        runTest(car1);
+        runTest(transport1);
 
-        Info.printInfo();
+        car1.keepSpeed();
+        car1.stop();
 
-        bus1.showSeatsNumber();
+        runTest(transport2);
+        bus1.keepSpeed();
+        bus1.stop();
+        bus1.refuel();
+    }
+    public static void runTest(Transport transport){
 
-        //car1.printCarInfo();
-
-
+        transport.run();
     }
 }

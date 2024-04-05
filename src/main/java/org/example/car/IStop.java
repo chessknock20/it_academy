@@ -1,2 +1,5 @@
-package org.example.car;public interface IStop {
+package org.example.car;
+
+public interface IStop {
+    void stop();
 }

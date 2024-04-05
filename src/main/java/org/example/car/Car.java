@@ -1,6 +1,6 @@
 package org.example.car;
 
-public class Car extends Transport {
+public class Car extends Transport implements IRefuel, IStop, IKeepSpeed {
 
     Engine engine;
     Radiator radiator;
@@ -49,14 +49,21 @@ public class Car extends Transport {
         System.out.println("The car is parked");
     }
 
+    @Override
+    public void refuel() {
+        System.out.println("The car is refueling");
+    }
 
-//    public void printCarInfo(){
-//
-//        if(engine == null || radiator == null || battery == null) {
-//            System.out.println(getModel() + ", " + getHeight() + ", " + getWeight() + ", " + getMaxSpeed());
-//        } else {
-//            System.out.println(getModel() + ", " + getHeight() + ", " + getWeight() + ", " + getMaxSpeed() + ", " + engine.getPower() + ", "+ radiator.getBrand()+ ", " + battery.getCapacity());
-//        }
-//    }
+
+    @Override
+    public void stop() {
+        System.out.println("The car stopped");
+    }
+    @Override
+    public void keepSpeed() {
+        System.out.println("Keep speed 90");
+    }
+
+
 }
 

@@ -6,6 +6,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
 
+
 public class TextCreator {
 
     public String[] createText(File file) throws IOException {

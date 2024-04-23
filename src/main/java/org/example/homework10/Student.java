@@ -6,11 +6,11 @@ import lombok.*;
 @ToString
 @Builder
 @EqualsAndHashCode
+@PlaceOfResidence
 public class Student  {
 
-    @MyAnnotation
     private String name;
-    @MyAnnotation
+
     private int age;
 
     public Student() {
@@ -27,6 +27,11 @@ public class Student  {
     public Student(String name, int age) {
         this.name = name;
         this.age = age;
+    }
+
+    public void getStudentDetails(){
+        System.out.println("Student's name is " + name);
+        System.out.println("Student's age is "+ age);
     }
 
 }

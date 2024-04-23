@@ -5,11 +5,11 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Target(value = ElementType.FIELD)
+@Target(value = ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface MyAnnotation {
+public @interface PlaceOfResidence {
 
-    String name() default "Bob";
+    String country() default "Belarus";
 
-    int age() default 18;
+    String city() default "Minsk";
 }
